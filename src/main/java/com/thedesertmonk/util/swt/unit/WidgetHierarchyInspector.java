@@ -20,7 +20,8 @@ public class WidgetHierarchyInspector {
 	 * Retrieves all children of the given {@link Composite} which are instances
 	 * of the given class.
 	 *
-	 * @param <T>
+	 * @param <T> The type of the children to retrieve. Must be a subclass of
+	 *            {@link Control}.
 	 *
 	 * @param parent The parent {@link Composite} for which child {@link Control
 	 *            Controls} will be retrieved. Cannot be null.
