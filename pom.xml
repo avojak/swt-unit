@@ -1,0 +1,136 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.thedesertmonk.util</groupId>
+	<artifactId>swt-unit</artifactId>
+	<version>1.0.0-SNAPSHOT</version>
+	<packaging>jar</packaging>
+	<name>swt-unit</name>
+	<description>SWT unit testing utilities</description>
+	<inceptionYear>2017</inceptionYear>
+	<developers>
+		<developer>
+			<name>Andrew Vojak</name>
+			<id>avojak</id>
+			<url>https://www.avojak.com</url>
+		</developer>
+	</developers>
+	<scm>
+		<url>https://github.com/avojak/swt-unit</url>
+		<connection>scm:git:https://avojak@github.com/swt-unit.git</connection>
+		<developerConnection>scm:git:https://avojak@github.com/swt-unit.git</developerConnection>
+	</scm>
+	<ciManagement>
+		<system>travis</system>
+		<url><!-- TODO --></url>
+	</ciManagement>
+	<properties>
+		<swt.version>4.6.1</swt.version>
+		<swt.artifactId /><!-- Overwritten by SWT profiles -->
+	</properties>
+	<dependencies>
+		<!-- Compile dependencies -->
+		<dependency>
+			<groupId>com.google.guava</groupId>
+			<artifactId>guava</artifactId>
+			<version>19.0</version>
+		</dependency>
+		<dependency>
+			<groupId>org.eclipse.swt</groupId>
+			<artifactId>${swt.artifactId}</artifactId>
+			<version>${swt.version}</version>
+		</dependency>
+		<!-- Test dependencies -->
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>4.12</version>
+			<scope>test</scope>
+		</dependency>
+	</dependencies>
+	<profiles>
+		<profile>
+			<id>swt-win32-x86</id>
+			<activation>
+				<os>
+					<family>windows</family>
+					<arch>x86</arch>
+				</os>
+			</activation>
+			<properties>
+				<swt.artifactId>org.eclipse.swt.win32.win32.x86</swt.artifactId>
+			</properties>
+		</profile>
+		<profile>
+			<id>swt-win32-x86_64</id>
+			<activation>
+				<os>
+					<family>windows</family>
+					<arch>x86_64</arch>
+				</os>
+			</activation>
+			<properties>
+				<swt.artifactId>org.eclipse.swt.win32.win32.x86_64</swt.artifactId>
+			</properties>
+		</profile>
+		<profile>
+			<id>swt-mac-x86_64</id>
+			<activation>
+				<os>
+					<family>mac</family>
+					<arch>x86_64</arch>
+				</os>
+			</activation>
+			<properties>
+				<swt.artifactId>org.eclipse.swt.cocoa.macosx.x86_64</swt.artifactId>
+			</properties>
+		</profile>
+		<profile>
+			<id>swt-linux-x86</id>
+			<activation>
+				<os>
+					<family>linux</family>
+					<arch>x86</arch>
+				</os>
+			</activation>
+			<properties>
+				<swt.artifactId>org.eclipse.swt.gtk.linux.x86</swt.artifactId>
+			</properties>
+		</profile>
+		<profile>
+			<id>swt-linux-x86_64</id>
+			<activation>
+				<os>
+					<family>linux</family>
+					<arch>x86_64</arch>
+				</os>
+			</activation>
+			<properties>
+				<swt.artifactId>org.eclipse.swt.gtk.linux.x86_64</swt.artifactId>
+			</properties>
+		</profile>
+	</profiles>
+	<build>
+		<!-- TODO -->
+	</build>
+	<reporting>
+		<!-- TODO -->
+	</reporting>
+	<repositories>
+		<repository>
+			<id>maven-eclipse-repo</id>
+			<url>http://maven-eclipse.github.io/maven</url>
+		</repository>
+	</repositories>
+	<distributionManagement>
+		<downloadUrl><!-- TODO --></downloadUrl>
+		<site><!-- TODO -->
+		</site>
+		<snapshotRepository>
+			<!-- TODO -->
+		</snapshotRepository>
+		<repository>
+			<!-- TODO -->
+		</repository>
+	</distributionManagement>
+</project>
