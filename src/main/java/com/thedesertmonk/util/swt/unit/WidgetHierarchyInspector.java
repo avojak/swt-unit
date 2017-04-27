@@ -14,7 +14,18 @@ import org.eclipse.swt.widgets.Control;
  * @author Andrew Vojak
  */
 @SuppressWarnings("nls")
-public class WidgetHierarchyInspector {
+public final class WidgetHierarchyInspector {
+
+	/**
+	 * <p>
+	 * <b><em>Cannot be instantiated.</em></b>
+	 * </p>
+	 *
+	 * @exception UnsupportedOperationException
+	 */
+	public WidgetHierarchyInspector() {
+		throw new UnsupportedOperationException(getClass().getName() + " cannot not be instantiated.");
+	}
 
 	/**
 	 * Retrieves all children of the given {@link Composite} which are instances
@@ -31,7 +42,7 @@ public class WidgetHierarchyInspector {
 	 *         Controls}.
 	 */
 	@SuppressWarnings("unchecked")
-	public static <T extends Control> List<T> getChildren(final Composite parent, final Class<T> clazz) {
+	public static final <T extends Control> List<T> getChildren(final Composite parent, final Class<T> clazz) {
 		checkNotNull(parent, "parent cannot be null");
 		checkNotNull(clazz, "clazz cannot be null");
 

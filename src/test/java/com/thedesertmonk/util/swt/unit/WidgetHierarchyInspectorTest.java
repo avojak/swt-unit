@@ -47,6 +47,15 @@ public class WidgetHierarchyInspectorTest {
 	}
 
 	/**
+	 * Tests that the constructor throws an
+	 * {@link UnsupportedOperationException} when called.
+	 */
+	@Test(expected = UnsupportedOperationException.class)
+	public void testConstructor() {
+		new WidgetHierarchyInspector();
+	}
+
+	/**
 	 * Tests that {@link WidgetHierarchyInspector#getChildren(Composite, Class)}
 	 * throws an exception when the given parent {@link Composite} is
 	 * {@code null}.

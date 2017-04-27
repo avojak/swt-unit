@@ -26,7 +26,9 @@
 	</ciManagement>
 	<properties>
 		<swt.version>4.6.1</swt.version>
-		<swt.artifactId /><!-- Overwritten by SWT profiles -->
+		<!-- Overwritten by SWT profiles -->
+		<swt.artifactId />
+		<os.jvmargs />
 	</properties>
 	<dependencies>
 		<!-- Compile dependencies -->
@@ -83,6 +85,7 @@
 			</activation>
 			<properties>
 				<swt.artifactId>org.eclipse.swt.cocoa.macosx.x86_64</swt.artifactId>
+				<os.jvmargs>-XstartOnFirstThread</os.jvmargs>
 			</properties>
 		</profile>
 		<profile>
@@ -111,10 +114,73 @@
 		</profile>
 	</profiles>
 	<build>
-		<!-- TODO -->
+		<pluginManagement>
+			<plugins>
+				<plugin>
+					<groupId>org.eluder.coveralls</groupId>
+					<artifactId>coveralls-maven-plugin</artifactId>
+					<version>4.3.0</version>
+					<configuration>
+						<jacocoReports>
+							<jacocoReport>${project.basedir}/target/site/jacoco-aggregate/jacoco.xml</jacocoReport>
+						</jacocoReports>
+					</configuration>
+				</plugin>
+			</plugins>
+		</pluginManagement>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.6.1</version>
+				<configuration>
+					<compilerArgs>${jvm.options}</compilerArgs>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-surefire-plugin</artifactId>
+				<version>2.20</version>
+				<configuration>
+					<argLine>@{argLine} ${os.jvmargs}</argLine>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.jacoco</groupId>
+				<artifactId>jacoco-maven-plugin</artifactId>
+				<version>0.7.8</version>
+				<executions>
+					<execution>
+						<goals>
+							<goal>prepare-agent</goal>
+						</goals>
+					</execution>
+					<execution>
+						<id>report</id>
+						<phase>prepare-package</phase>
+						<goals>
+							<goal>report</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
 	</build>
 	<reporting>
-		<!-- TODO -->
+		<plugins>
+			<plugin>
+				<groupId>org.jacoco</groupId>
+				<artifactId>jacoco-maven-plugin</artifactId>
+				<version>0.7.8</version>
+				<reportSets>
+					<reportSet>
+						<reports>
+							<report>report</report>
+						</reports>
+					</reportSet>
+				</reportSets>
+			</plugin>
+		</plugins>
 	</reporting>
 	<repositories>
 		<repository>
@@ -124,13 +190,20 @@
 	</repositories>
 	<distributionManagement>
 		<downloadUrl><!-- TODO --></downloadUrl>
-		<site><!-- TODO -->
-		</site>
 		<snapshotRepository>
-			<!-- TODO -->
+			<name>TheDesertMonk Snapshot</name>
+			<id>thedesertmonk-snapshot</id>
+			<url>http://repo.thedesertmonk.com/repository/maven-snapshots/</url>
 		</snapshotRepository>
 		<repository>
-			<!-- TODO -->
+			<name>TheDesertMonk Release</name>
+			<id>thedesertmonk-release</id>
+			<url>http://repo.thedesertmonk.com/repository/maven-releases/</url>
 		</repository>
+		<site>
+			<name>TheDesertMonk Site</name>
+			<id>thedesertmonk-site</id>
+			<url>http://repo.thedesertmonk.com/repository/maven-sites/</url>
+		</site>
 	</distributionManagement>
 </project>
