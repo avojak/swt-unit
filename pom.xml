@@ -22,7 +22,7 @@
 	</scm>
 	<ciManagement>
 		<system>travis</system>
-		<url><!-- TODO --></url>
+		<url>https://travis-ci.org/avojak/swt-unit</url>
 	</ciManagement>
 	<properties>
 		<swt.version>4.6.1</swt.version>
@@ -89,23 +89,11 @@
 			</properties>
 		</profile>
 		<profile>
-			<id>swt-linux-x86</id>
-			<activation>
-				<os>
-					<family>linux</family>
-					<arch>x86</arch>
-				</os>
-			</activation>
-			<properties>
-				<swt.artifactId>org.eclipse.swt.gtk.linux.x86</swt.artifactId>
-			</properties>
-		</profile>
-		<profile>
 			<id>swt-linux-x86_64</id>
 			<activation>
 				<os>
-					<family>linux</family>
-					<arch>x86_64</arch>
+					<family>unix</family>
+					<arch>amd64</arch>
 				</os>
 			</activation>
 			<properties>
