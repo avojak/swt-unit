@@ -2,6 +2,10 @@ language: java
 jdk:
   - oraclejdk8
 sudo: false
+before_script:
+  - "export DISPLAY=:99.0"
+  - "sh -e /etc/init.d/xvfb start"
+  - sleep 3 # give xvfb some time to start
 script: 
   - wget https://raw.githubusercontent.com/avojak/settings.xml/master/settings.xml -O /tmp/settings.xml
   - mvn clean verify coveralls:report deploy --settings /tmp/settings.xml
