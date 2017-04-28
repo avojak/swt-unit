@@ -25,6 +25,8 @@
 		<url>https://travis-ci.org/avojak/swt-unit</url>
 	</ciManagement>
 	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 		<swt.version>4.6.1</swt.version>
 		<!-- Overwritten by SWT profiles -->
 		<swt.artifactId />
