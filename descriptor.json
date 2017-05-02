@@ -21,7 +21,7 @@
     },
     "files": [
         {
-            "includePattern": "target/(.*\.jar)",
+            "includePattern": "target/(.*\\.jar)",
             "uploadPattern": "${project.groupId}/${project.artifactId}/${project.version}/$1"
         }
     ],
