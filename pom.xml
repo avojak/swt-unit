@@ -193,7 +193,7 @@
 		<site>
 			<name>TheDesertMonk Site</name>
 			<id>thedesertmonk-site</id>
-			<url>http://repo.thedesertmonk.com/repository/maven-sites/</url>
+			<url>http://repo.thedesertmonk.com/repository/site/</url>
 		</site>
 	</distributionManagement>
 </project>
