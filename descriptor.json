@@ -1,0 +1,33 @@
+{
+    "package": {
+        "name": "swt-util", // Bintray package name
+        "repo": "maven-snapshot", // Bintray repository name
+        "subject": "avojak", // Bintray subject (user or organization)
+        "website_url": "https://www.avojak.com",
+        "issue_tracker_url": "https://github.com/avojak/swt-unit/issues",
+        "vcs_url": "https://github.com/avojak/swt-unit.git",
+        "github_use_tag_release_notes": true,
+        "github_release_notes_file": "RELEASE.txt",
+        "licenses": ["GPL-3.0"],
+        "labels": ["swt", "java", "junit", "unit-testing"],
+        "public_download_numbers": true,
+        "public_stats": true,
+    },
+    "version": {
+        "name": "${project.version}",
+        "released": "${build.timestamp}",
+        "vcs_tag": "${project.version}",
+        "gpgSign": false
+    },
+    "files": [
+        {
+            "includePattern": "${project.basedir}/target/(.*\.jar)",
+            "uploadPattern": "${project.groupId}/${project.artifactId}/${project.version}/$1"
+        },
+        {
+            "includePattern": "${project.basedir}/pom.xml",
+            "uploadPattern": "${project.groupId}/${project.artifactId}/${project.version}/${project.artifactId}-${project.version}.pom"
+        }
+    ],
+    "publish": true
+}
