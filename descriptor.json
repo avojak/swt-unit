@@ -14,15 +14,18 @@
         "public_stats": true,
     },
     "version": {
-        "name": "${project.version}",
-        "released": "${build.timestamp}",
-        "vcs_tag": "${project.version}",
+        "name": "1.0-SNAPSHOT",
+        "vcs_tag": "1.0-SNAPSHOT",
         "gpgSign": false
     },
     "files": [
         {
             "includePattern": "target/(.*\\.jar)",
-            "uploadPattern": "${project.groupId}/${project.artifactId}/${project.version}/$1"
+            "uploadPattern": "com.thedesertmonk.util/swt-unit/1.0-SNAPSHOT/$1"
+        },
+        {
+            "includePattern": "${project.basedir}/pom.xml",
+            "uploadPattern": "com.thedesertmonk.util/swt-unit/1.0-SNAPSHOT/swt-unit-1.0-SNAPSHOT.pom"
         }
     ],
     "publish": true
