@@ -1,8 +1,8 @@
 {
     "package": {
-        "name": "swt-util", // Bintray package name
-        "repo": "maven-snapshot", // Bintray repository name
-        "subject": "avojak", // Bintray subject (user or organization)
+        "name": "swt-util",
+        "repo": "maven-snapshot",
+        "subject": "avojak",
         "website_url": "https://www.avojak.com",
         "issue_tracker_url": "https://github.com/avojak/swt-unit/issues",
         "vcs_url": "https://github.com/avojak/swt-unit.git",
