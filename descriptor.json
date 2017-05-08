@@ -11,7 +11,7 @@
         "licenses": ["GPL-3.0"],
         "labels": ["swt", "java", "junit", "unit-testing"],
         "public_download_numbers": true,
-        "public_stats": true,
+        "public_stats": true
     },
     "version": {
         "name": "1.0-SNAPSHOT",
