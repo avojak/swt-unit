@@ -24,7 +24,7 @@
             "uploadPattern": "com.thedesertmonk.util/swt-unit/1.0-SNAPSHOT/$1"
         },
         {
-            "includePattern": "${project.basedir}/pom.xml",
+            "includePattern": "pom.xml",
             "uploadPattern": "com.thedesertmonk.util/swt-unit/1.0-SNAPSHOT/swt-unit-1.0-SNAPSHOT.pom"
         }
     ],
