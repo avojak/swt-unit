@@ -6,6 +6,7 @@ import static org.junit.Assert.assertTrue;
 import java.util.List;
 
 import org.eclipse.swt.SWT;
+import org.eclipse.swt.custom.ScrolledComposite;
 import org.eclipse.swt.widgets.Button;
 import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Control;
@@ -111,6 +112,26 @@ public class WidgetHierarchyInspectorTest {
 		assertEquals(child1, children.get(0));
 		assertEquals(child2, children.get(1));
 		assertEquals(child3, children.get(2));
+	}
+
+	/**
+	 * Tests {@link WidgetHierarchyInspector#getChildren(Composite, Class)} when
+	 * there are multiple children with the same superclass.
+	 */
+	@Test
+	public void testGetChildren_MultipleChildren_SameSuperclass() {
+		final Composite child1 = new Composite(parent, SWT.NONE);
+		final ScrolledComposite child2 = new ScrolledComposite(parent, SWT.V_SCROLL);
+
+		final List<Composite> compositeChildren = WidgetHierarchyInspector.getChildren(parent, Composite.class);
+		assertEquals(2, compositeChildren.size());
+		assertEquals(child1, compositeChildren.get(0));
+		assertEquals(child2, compositeChildren.get(1));
+
+		final List<ScrolledComposite> scrolledCompositeChildren = WidgetHierarchyInspector.getChildren(parent,
+				ScrolledComposite.class);
+		assertEquals(1, scrolledCompositeChildren.size());
+		assertEquals(child2, scrolledCompositeChildren.get(0));
 	}
 
 	/**
