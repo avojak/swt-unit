@@ -22,16 +22,16 @@ The artifact may be pulled into a Maven project via the `pom.xml` file.
 
 ```xml
 <dependency>
-	<groupId>com.thedesertmonk.util</groupId>
-	<artifactId>swt-unit</artifactId>
-	<version>1.0</version>
-	<scope>test</scope>
+  <groupId>com.thedesertmonk.util</groupId>
+  <artifactId>swt-unit</artifactId>
+  <version>1.0</version>
+  <scope>test</scope>
 </dependency>
 ```
 ```xml
 <repository>
-	<id>TheDesertMonk Maven Release Repository</id>
-	<url>http://repo.thedesertmonk.com/maven-release</url>
+  <id>TheDesertMonk Maven Release Repository</id>
+  <url>http://repo.thedesertmonk.com/maven-release</url>
 </repository>
 ```
 
@@ -39,16 +39,16 @@ The artifact may be pulled into a Maven project via the `pom.xml` file.
 
 ```xml
 <dependency>
-	<groupId>com.thedesertmonk.util</groupId>
-	<artifactId>swt-unit</artifactId>
-	<version>1.0-SNAPSHOT</version>
-	<scope>test</scope>
+  <groupId>com.thedesertmonk.util</groupId>
+  <artifactId>swt-unit</artifactId>
+  <version>1.0-SNAPSHOT</version>
+  <scope>test</scope>
 </dependency>
 ```
 ```xml
 <repository>
-	<id>TheDesertMonk Maven Snapshot Repository</id>
-	<url>http://repo.thedesertmonk.com/maven-snapshot</url>
+  <id>TheDesertMonk Maven Snapshot Repository</id>
+  <url>http://repo.thedesertmonk.com/maven-snapshot</url>
 </repository>
 ```
 
