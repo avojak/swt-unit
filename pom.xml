@@ -178,4 +178,21 @@
 			<url>http://maven-eclipse.github.io/maven</url>
 		</repository>
 	</repositories>
+	<distributionManagement>
+		<snapshotRepository>
+			<name>TheDesertMonk Snapshot</name>
+			<id>thedesertmonk-snapshot</id>
+			<url>http://repo.thedesertmonk.com/artifactory/maven-snapshot/</url>
+		</snapshotRepository>
+		<repository>
+			<name>TheDesertMonk Release</name>
+			<id>thedesertmonk-release</id>
+			<url>http://repo.thedesertmonk.com/artifactory/maven-release/</url>
+		</repository>
+		<site>
+			<name>TheDesertMonk Site</name>
+			<id>thedesertmonk-site</id>
+			<url>http://repo.thedesertmonk.com/artifactory/maven-site/</url>
+		</site>
+	</distributionManagement>
 </project>

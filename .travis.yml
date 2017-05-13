@@ -5,11 +5,7 @@ before_script:
 - export DISPLAY=:99.0
 - sh -e /etc/init.d/xvfb start
 - sleep 3
-script: mvn clean install coveralls:report
-deploy:
-  provider: bintray
-  file: descriptor.json
-  user:
-    secure: f3AvG19d229Zu4adwNqdhFbxp6QpCUy4C9k7nlw69k2GOSPME9mU6a/gLv5eYLPhNYWa+0djRqAgUn8RQCyGU9VLhuRzjlLVqiAFXGc8uoJPNpBa7kiWatOaaQtOmE4ef3mxw+0reZeW6GXT4olJ9RHE8/nXItB3wuz2DGyul/Rn2csQR4phJBL45TP8pdX0Jo6ci5cs72BkvHZaFMeGLyQwWrxA+yagGCYeDy+K/VfFlVlcJbBEcTVWgw/9kJBhZiXxEuenoq0yTjUxpNddqomXbUGJ8gnsR4YILKySW8/GqVndc9mpElPha5/JARX1qhvSKqUT2pXgYM8Y/sBee8QDNvuYW3iVuRnsXb29FinMgyzXi5yNDUi6Oq9vhBipf16EUSl1tyTyZToifTycjktW7RxloxyM/rmcqCRGX4iZxTWb7zGf9r/A5CDeCL4SGvKl8HcZJUH0Vz91z8wKZN+omHMZapAzHfkSGM1JQ0LioOavFF4ZdEj8pwxu1iYpPXWyN5+ihfUz6kM0xxU6k1cMZDx6Ag0ozGuXBxGo00hOVMlDABqXdKMgK1FXS9tMnUvpfqyVb7Sbm+4cQd+ZNtpY91Dx3E4xB1wVa37JHa/8z0P5bRVhgmR7HsoVtPVBnC9CyGniG/vVLBck59l7l4LOipCE9PSPVazS653zGOc=
-  key:
-    secure: NXQH+8uFQpgqr8EK9W+f//Q9a/39qYktCgjG5J/rY1uEqbyMi8daVqq423t1Sz9LEbiKTdfLypiTuqiO/RfFv6f9TfftQMiEhvujEJLz5HBcbit+Cd9ec61d4GIobXEm1Lk3/lVpofrvh9xo/aSb+O9hwBEyK50wW+vYet1AajK/+mN/9/6qjasgvGFBA9PhLtjfo3Mg5QOtHc00HU8Tqst7y9L12z9X+DiIJfD53WDYmtR+9ZAt06lRlUOw6Ykvw4lJd6ACzTbgb7Q0eWFBV/2rcVlhChFO1H6syygstCqnwkmLcYXqwcucIhkekSdeOqOaRko02zyBSUVCakTaNMZNbJezXjor1XbyjIK8KS4b5H1DK8sU0iv0pKtkLVtV6014vMkYUaTszjUPst++ruUiA44GMkENA+80ZH901u+fPbfgkXxx8F1YiYr/FhapOWkp7q7vHPU62tNMPz4YBtb1JecQaq/RhjDWMFVmq6KkaSUNof6//ay+89JE6vF8xuBFhIrQ7OUpHXulopbWm665QchZd4wM+FGwKdi1dtaUYchXRcVsGbjCGR5/UVPqaL/BZBNV5ow+NicheDImQ+L26ApcZUZ4Mz2QJwEW/gWto8sG6o3CMs99LHCNsIY7Wx6cotNku/FvcgyTZ0dwsTFZut3qkruIZQBvJ8Vy8yc=
+script: mvn install coveralls:report
+after_success: 
+- wget https://raw.githubusercontent.com/avojak/settings.xml/master/settings.xml -O /tmp/settings.xml
+- mvn deploy --settings /tmp/settings.xml
