@@ -8,4 +8,4 @@ before_script:
 script: mvn install coveralls:report
 after_success: 
 - wget https://raw.githubusercontent.com/avojak/settings.xml/master/settings.xml -O /tmp/settings.xml
-- mvn -Dmaven.metadata.legacy=true deploy site-deploy --settings /tmp/settings.xml
+- mvn -X -Dmaven.metadata.legacy=true deploy site-deploy --settings /tmp/settings.xml
