@@ -1,6 +1,6 @@
 # swt-unit
 
-[![Build Status](https://travis-ci.org/avojak/swt-unit.svg?branch=master)](https://travis-ci.org/avojak/swt-unit) [![Coverage Status](https://coveralls.io/repos/github/avojak/swt-unit/badge.svg?branch=master)](https://coveralls.io/github/avojak/swt-unit?branch=master) [![License: GPL v3](https://img.shields.io/badge/license-GPL%20v3-blue.svg)](http://www.gnu.org/licenses/gpl-3.0) [![Version](https://img.shields.io/badge/version-1.0-blue.svg)](http://repo.thedesertmonk.com/artifactory/webapp/#/artifacts/browse/tree/General/maven-release/com/thedesertmonk/util/swt-unit/1.0)
+[![Build Status](https://travis-ci.org/avojak/swt-unit.svg?branch=1.0)](https://travis-ci.org/avojak/swt-unit) [![Coverage Status](https://coveralls.io/repos/github/avojak/swt-unit/badge.svg?branch=1.0)](https://coveralls.io/github/avojak/swt-unit?branch=1.0) [![License: GPL v3](https://img.shields.io/badge/license-GPL%20v3-blue.svg)](http://www.gnu.org/licenses/gpl-3.0) [![Version](https://img.shields.io/badge/version-1.0-blue.svg)](http://repo.thedesertmonk.com/artifactory/webapp/#/artifacts/browse/tree/General/maven-release/com/thedesertmonk/util/swt-unit/1.0)
 
 Generally I try to avoid directly testing [SWT](https://www.eclipse.org/swt/) controls, however there are times where it is useful to verify their state. The aim of this project is to provide utilities which facilitate unit tests around SWT widgets and controls.
 
