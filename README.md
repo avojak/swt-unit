@@ -30,7 +30,8 @@ The artifact may be pulled into a Maven project via the `pom.xml` file.
 ```
 ```xml
 <repository>
-  <id>TheDesertMonk Maven Release Repository</id>
+  <id>thedesertmonk-release</id>
+  <name>TheDesertMonk Maven Release Repository</name>
   <url>http://repo.thedesertmonk.com/maven-release</url>
 </repository>
 ```
@@ -47,7 +48,8 @@ The artifact may be pulled into a Maven project via the `pom.xml` file.
 ```
 ```xml
 <repository>
-  <id>TheDesertMonk Maven Snapshot Repository</id>
+  <id>thedesertmonk-snapshot</id>
+  <name>TheDesertMonk Maven Snapshot Repository</name>
   <url>http://repo.thedesertmonk.com/maven-snapshot</url>
 </repository>
 ```
