@@ -194,13 +194,6 @@
 				</executions>
 			</plugin>
 		</plugins>
-		<extensions>
-			<extension>
-				<groupId>org.apache.maven.wagon</groupId>
-				<artifactId>wagon-webdav-jackrabbit</artifactId>
-				<version>2.10</version>
-			</extension>
-		</extensions>
 	</build>
 	<reporting>
 		<plugins>
@@ -235,10 +228,5 @@
 			<id>thedesertmonk-release</id>
 			<url>http://repo.thedesertmonk.com/artifactory/maven-release/</url>
 		</repository>
-		<site>
-			<name>TheDesertMonk Site</name>
-			<id>thedesertmonk-site</id>
-			<url>dav:http://repo.thedesertmonk.com/artifactory/maven-site/</url>
-		</site>
 	</distributionManagement>
 </project>
