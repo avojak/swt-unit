@@ -3,7 +3,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.thedesertmonk.util</groupId>
 	<artifactId>swt-unit</artifactId>
-	<version>1.0-SNAPSHOT</version>
+	<version>1.0</version>
 	<packaging>jar</packaging>
 	<name>swt-unit</name>
 	<description>SWT unit testing utilities</description>
