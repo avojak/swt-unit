@@ -1,4 +1,4 @@
-package com.thedesertmonk.util.swt.unit;
+package com.avojak.lib.swt.unit;
 
 import static com.google.common.base.Preconditions.checkNotNull;
 

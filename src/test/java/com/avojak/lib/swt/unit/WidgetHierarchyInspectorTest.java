@@ -1,4 +1,4 @@
-package com.thedesertmonk.util.swt.unit;
+package com.avojak.lib.swt.unit;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
@@ -17,6 +17,8 @@ import org.eclipse.swt.widgets.Text;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
+
+import com.avojak.lib.swt.unit.WidgetHierarchyInspector;
 
 /**
  * Test class for {@link WidgetHierarchyInspector}.
