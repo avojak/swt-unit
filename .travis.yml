@@ -7,5 +7,4 @@ before_script:
 - sleep 3
 script: mvn install coveralls:report
 after_success: 
-- wget https://raw.githubusercontent.com/avojak/settings.xml/master/settings.xml -O /tmp/settings.xml
-- mvn deploy --settings /tmp/settings.xml
+- mvn deploy --settings travis-settings.xml

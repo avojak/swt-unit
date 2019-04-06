@@ -13,7 +13,6 @@ import org.eclipse.swt.widgets.Control;
  *
  * @author Andrew Vojak
  */
-@SuppressWarnings("nls")
 public final class WidgetHierarchyInspector {
 
 	/**
